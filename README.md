@@ -82,7 +82,7 @@ pipeline {
                 sh '''
                 curl -u deployer:deployer \
                 -T target/sampleapp.war \
-                "http://3.216.80.183:8081/manager/text/deploy?path=/sampleapp&update=true"
+                "http://<TOMCAT-SERVER-IP>:8081/manager/text/deploy?path=/sampleapp&update=true"
                 '''
             }
         }
@@ -136,11 +136,20 @@ Output:
 
 ---
 
-## Live Application
+## Application Verification
 
-Application successfully deployed and accessible through Apache Tomcat:
+The application was successfully deployed to Apache Tomcat on AWS EC2 and verified through browser access.
 
-**http://3.216.80.183:8081/sampleapp**
+---
+
+## Project Highlights
+
+* Automated build and deployment using Jenkins Pipeline
+* Maven-based Java application packaging
+* Remote deployment to Apache Tomcat
+* GitHub source code integration
+* AWS EC2 infrastructure hosting
+* End-to-end CI/CD workflow implementation
 
 ---
 
@@ -170,7 +179,7 @@ Successfully implemented a CI/CD pipeline that:
 * Builds a Java application using Maven
 * Packages the application as a WAR file
 * Deploys automatically to Apache Tomcat
-* Makes the application available through a public URL
+* Deploys the application successfully to a remote Apache Tomcat server hosted on AWS EC2
 
 ---
 
@@ -180,4 +189,4 @@ Successfully implemented a CI/CD pipeline that:
 
 Cloud & DevOps Engineer
 
-Skills: AWS | Jenkins | Maven | Apache Tomcat | GitHub | Linux | CI/CD
+**Skills:** AWS | Jenkins | Maven | Apache Tomcat | GitHub | Linux | CI/CD
